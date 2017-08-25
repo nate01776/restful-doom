@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="fe75c37d-089b-4e17-bdde-bca7e774f0e5" activeEnvironment="Default environment" name="restFulDoom" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting/><con:authRepository/><con:tags/></con:soapui-project>
