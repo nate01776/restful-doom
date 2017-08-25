@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/world" path="/api/world" id="d9670acb-1387-4bd7-8813-0a6879c5160d" xmlns:con="http://eviware.com/soapui/config"><con:description>org.raml.v2.internal.impl.commons.model.DefaultModelElement@77d2ebae</con:description><con:settings><con:setting id="d9670acb-1387-4bd7-8813-0a6879c5160dfileName">%2Fapi%2Fworld</con:setting></con:settings><con:parameters/><con:resource name="/doors" path="/doors" id="a60bf105-c7ca-4b49-b017-dfcfade12537"><con:description>org.raml.v2.internal.impl.commons.model.DefaultModelElement@405bdd85</con:description><con:settings/><con:parameters/><con:resource name="/{id}" path="/{id}" id="76f26348-50d0-4da1-8f10-cebaed2a336a"><con:description>org.raml.v2.internal.impl.commons.model.DefaultModelElement@741bd8b0</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:style>TEMPLATE</con:style><con:default xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:description>door id</con:description></con:parameter></con:parameters><con:method name="get" id="c833a0a1-5739-44f8-a974-e3d716c171dc" method="GET"><con:description>Query the specified door</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent>{
+  "id": 140,
+  "state": "closed",
+  "keyRequired": "none"
+}
+</con:sampleContent></con:representation><con:representation type="FAULT"><con:status>404</con:status><con:params/><con:description>The specified door does not exist</con:description></con:representation><con:request name="Request 1" id="c1e284ea-7f96-444c-8470-72bba903e7cd" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:parameters/></con:request></con:method><con:method name="patch" id="24ad243a-579f-484f-bd24-85263b584b54" method="PATCH"><con:description>Update the specified door</con:description><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/><con:sampleContent>{
+  "state": "open"
+}
+</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent>{
+  "id": 140,
+  "state": "open",
+  "keyRequired": "none"
+}
+</con:sampleContent></con:representation><con:representation type="FAULT"><con:status>404</con:status><con:params/><con:description>The specified door does not exist</con:description></con:representation><con:request name="Sample Request" id="8f51d60f-ef68-4daf-b43d-9db99ec92d48" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:request>{
+  "state": "open"
+}
+</con:request><con:parameters/></con:request></con:method></con:resource><con:method name="get" id="99fdaa64-2fb0-4930-baae-39a03506bd1e" method="GET"><con:description>Query door items</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent>[
+  {
+    "id": 140,
+    "state": "closed",
+    "keyRequired": "none"
+  }
+]
+</con:sampleContent></con:representation><con:request name="Request 1" id="6d6433ff-d78f-4299-be0e-e24d978d43f4" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/objects" path="/objects" id="fb3b1e3e-731b-4164-9f61-a3b94fdc0883"><con:description>org.raml.v2.internal.impl.commons.model.DefaultModelElement@21bd7e5b</con:description><con:settings/><con:parameters/><con:resource name="/{id}" path="/{id}" id="064b51ba-997e-43cb-8ecd-f85ff9e1c51f"><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:style>TEMPLATE</con:style><con:default xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:parameter></con:parameters><con:method name="get" id="f4e587a6-289a-45f6-a399-d1e1339104d1" method="GET"><con:description>Query the specified map object</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent>{
+  "id": 1
+}</con:sampleContent></con:representation><con:representation type="FAULT"><con:status>404</con:status><con:params/><con:description>The specified object does not exist</con:description></con:representation><con:request name="Request 1" id="01afa5f7-1bc1-4013-8248-98795bb9ff3c" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:parameters/></con:request></con:method><con:method name="patch" id="529bcbdd-abb8-46bd-aba1-8f99204f9276" method="PATCH"><con:description>Update the specifed map object</con:description><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/><con:sampleContent>{
+  "health": 20,
+  "position": {
+    "z": 190
+  },
+  "flags": {
+    "MF_SHADOW": true
+  }
+}
+</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent>{
+  "id": 1
+}</con:sampleContent></con:representation><con:representation type="FAULT"><con:status>404</con:status><con:params/><con:description>The specified object does not exist</con:description></con:representation><con:request name="Sample Request" id="c235570b-c959-4639-abef-8378e0a45968" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:request>{
+  "health": 20,
+  "position": {
+    "z": 190
+  },
+  "flags": {
+    "MF_SHADOW": true
+  }
+}
+</con:request><con:parameters/></con:request></con:method><con:method name="delete" id="c72d8ae8-16f2-4970-be75-ad63a5ea7322" method="DELETE"><con:description>Delete the specified map object</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:status>204</con:status><con:params/><con:description>The specified object was deleted</con:description></con:representation><con:representation type="FAULT"><con:status>404</con:status><con:params/><con:description>The specified object does not exist</con:description></con:representation><con:request name="Request 1" id="19103820-d4c6-4e92-bbe1-7d0a45326fc4" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:method name="get" id="7b717ace-f4df-469d-af66-626dc139bbd6" method="GET"><con:description>Query map object items</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>distance</con:name><con:style>QUERY</con:style><con:default xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:description>Only return items up to this distance from player
+</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:representation><con:request name="Request 1" id="fcf705a7-c34a-4d51-9950-f72c6e44bbdc" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:parameters/></con:request></con:method><con:method name="post" id="f73c5c03-49d7-4abd-b755-da9c638011ca" method="POST"><con:description>Spawn a new map object</con:description><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/><con:sampleContent>{
+  "type": "IMP",
+  "distance": 250
+}
+</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent>{
+  "id": 1
+}</con:sampleContent></con:representation><con:representation type="FAULT"><con:status>400</con:status><con:params/><con:description>The specified object type is invalid</con:description></con:representation><con:request name="Sample Request" id="349d0dcb-aacb-479b-8f17-d67341a6c39a" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:request>{
+  "type": "IMP",
+  "distance": 250
+}
+</con:request><con:parameters/></con:request></con:method></con:resource><con:method name="get" id="e51aaa3c-45fe-4d2d-ad11-8f62cafa670e" method="GET"><con:description>Query the current world state</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent>{
+  "episode": 1,
+  "map": 2
+}
+</con:sampleContent></con:representation><con:request name="Request 1" id="cf36a9c6-93dc-4da1-a0f5-824f5e902eda" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:parameters/></con:request></con:method><con:method name="patch" id="7cd176e5-91bf-423e-b9f7-42b03fa48736" method="PATCH"><con:description>Update the current world state</con:description><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/><con:sampleContent>{
+  "map": 3
+}
+</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent>{
+  "episode": 1,
+  "map": 3
+}
+</con:sampleContent></con:representation><con:request name="Sample Request" id="29956b3a-743f-4f5c-9411-a040713823a2" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:request>{
+  "map": 3
+}
+</con:request><con:parameters/></con:request></con:method></con:resource>

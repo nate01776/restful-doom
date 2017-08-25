@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/api/player" path="/api/player" id="3362371e-770d-4630-b248-8caeb2387e71" xmlns:con="http://eviware.com/soapui/config"><con:description>org.raml.v2.internal.impl.commons.model.DefaultModelElement@42c762fc</con:description><con:settings><con:setting id="3362371e-770d-4630-b248-8caeb2387e71fileName">%2Fapi%2Fplayer</con:setting></con:settings><con:parameters/><con:resource name="/actions" path="/actions" id="c0de715e-8088-4ff7-82d8-59d5260c5cbf"><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:settings/><con:parameters/><con:method name="post" id="51b9f595-eab2-4f18-b858-e4de77345cb1" method="POST"><con:description>Create an action for the player to perform</con:description><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/><con:sampleContent>{
+  "type": "shoot"
+}
+</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:status>201</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:representation><con:request name="Sample Request" id="94ead097-3189-4d2d-a5ce-c3d2e193b0cb" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:request>{
+  "type": "shoot"
+}
+</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:method name="get" id="6987ed15-a2bc-4372-a659-ca69525617a3" method="GET"><con:description>Query the player</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent>{
+  "id": 0,
+  "position": {
+    "x": -32,
+    "y": -240,
+    "z": 24
+  },
+  "angle": 90,
+  "health": 100,
+  "type": "Player",
+  "flags": {
+    "MF_SOLID": true,
+    "MF_SHOOTABLE": true
+  },
+  "armor": 0,
+  "kills": 0,
+  "items": 0,
+  "secrets": 0,
+  "weapon": 1,
+  "keyCards": {
+    "blue": false,
+    "red": false,
+    "yellow": false
+  },
+  "cheatFlags": {}
+}
+</con:sampleContent></con:representation><con:request name="Request 1" id="4934c4d8-730f-41f1-b4cb-3357b2fb08eb" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method><con:method name="patch" id="6c682871-a70c-4100-ab48-e06e831c272a" method="PATCH"><con:description>Update the player</con:description><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/><con:sampleContent>{
+  "weapon": 3
+}
+</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:sampleContent>{
+  "id": 0,
+  "position": {
+    "x": -32,
+    "y": -240,
+    "z": 24
+  },
+  "angle": 90,
+  "height": 56,
+  "health": 100,
+  "type": "Player",
+  "flags": {
+    "MF_SOLID": true,
+    "MF_SHOOTABLE": true,
+    "MF_DROPOFF": true,
+    "MF_PICKUP": true,
+    "MF_NOTDMATCH": true
+  },
+  "armor": 0,
+  "kills": 0,
+  "items": 0,
+  "secrets": 0,
+  "weapon": 1,
+  "keyCards": {
+    "blue": false,
+    "red": false,
+    "yellow": false
+  },
+  "cheatFlags": {}
+}
+</con:sampleContent></con:representation><con:request name="Sample Request" id="e3f31863-f502-4d1d-85b6-870d2aecea23" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>http://localhost:6666</con:endpoint><con:request>{
+  "weapon": 3
+}
+</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource>
